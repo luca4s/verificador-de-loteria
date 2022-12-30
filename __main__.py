@@ -5,7 +5,7 @@ import json
 apostas = {
     "LINHA": ["01", "02", "03", "04", "05", "06"]
 }
-# Isso será usado para contar os acertos, insira a letra das linhas aqui
+# Isso será usado para contar os acertos, insira a letra das linhas aqui e o número de números sorteados
 acertos = {
     "LINHA": 0
 }
@@ -15,7 +15,7 @@ numeros = ["00", "00", "00", "00", "00", "00"]
 escolha = input("Método de verificação (1 - Manual, 2 - Automático): ")
 # Metódo de verificação manual
 if escolha == "1":
-    for x in range(6):
+    for x in range(len(numeros)):
         numeros[x] = input("Insira o %s° número: " % ((x + 1)))
 # Método de verificação automática
 elif escolha == "2":
