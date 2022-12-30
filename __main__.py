@@ -19,9 +19,8 @@ if escolha == "1":
         numeros[x] = input("Insira o %s° número: " % ((x + 1)))
 # Método de verificação automática
 elif escolha == "2":
-    url = "https://apiloterias.com.br/app/resultado?loteria=%s&token=%s&concurso=%s" # URL da API usada
+    url = "https://apiloterias.com.br/app/resultado?loteria=megasena&token=%s&concurso=%s" # URL da API usada, mude o query da loteria para a sua loteria
     token = input("Insira o seu token (https://apiloterias.com.br/): ") # Token para API
-    loteria = input("Insira a loteria (ex: megasena): ") # Tipo da Loteria
     concurso = input("Insira o número do concurso: ") # Número do concurso
     GET = requests.get(url % ((loteria), (token), (concurso))) # GET
     if GET.status_code == 200:
