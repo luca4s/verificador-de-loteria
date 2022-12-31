@@ -22,7 +22,7 @@ elif escolha == "2":
     url = "https://apiloterias.com.br/app/resultado?loteria=megasena&token=%s&concurso=%s" # URL da API usada, mude o query da loteria para a sua loteria
     token = input("Insira o seu token (https://apiloterias.com.br/): ") # Token para API
     concurso = input("Insira o número do concurso: ") # Número do concurso
-    GET = requests.get(url % ((loteria), (token), (concurso))) # GET
+    GET = requests.get(url % ((token), (concurso))) # GET
     if GET.status_code == 200:
         # Em caso de sucesso do GET, escrever as dezenas
         i = 0
@@ -44,5 +44,5 @@ for x in apostas:
 
 # Resultado do número de acertos
 for x in acertos:
-    print("Acertos na linha %s: %s" % ((x), (acertos, x))
+    print("Acertos na linha %s: %s" % ((x), (acertos[x])))
 input("Aperte ENTER para sair.")
