@@ -45,4 +45,4 @@ for x in apostas:
 # Resultado do número de acertos
 for x in acertos:
     print("Acertos na linha %s: %s" % ((x), (acertos, x))
-
+input("Aperte ENTER para sair.")
